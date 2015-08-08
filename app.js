@@ -1,19 +1,19 @@
 var express       = require('express'),
+    app           = express(),
     mongoose      = require('mongoose'),
+    methodOverride= require('method-override')
     http          = require('http'),
     path          = require('path'),
     favicon       = require('serve-favicon'),
     router        = express.Router(),
     logger        = require('morgan'),
     cookieParser  = require('cookie-parser'),
-    bodyparser    = require('body-parser'),
+    bodyParser    = require('body-parser'),
     port          = 3000;
 
 mongoose.connect('mongodb://localhost/wdinstagram')
 
 var routes = require('./routes/index');
-
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
