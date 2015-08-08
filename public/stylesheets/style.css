@@ -5,10 +5,60 @@ h1{
   color: white;
   font-size: 60px;
   display: inline;
+  padding: 20px;
+}
+
+.white_space{
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: inset 4px 4px 20px black;
+  height: 400px;
+}
+
+.grey_border{
+  border: 10px solid #D0D0D0;
+  margin: 20px;
+  height: 90%;
+}
+
+.user_name{
+  display: inline;
+  float: left;
+  margin: 5px;
+  color:  #3f729b;
+}
+
+.post_date{
+  display: inline;
+  float: right;
+  margin: 5px;
+  color: #D0D0D0;
+}
+
+#header{
+  padding: 20px;
 }
 
 #all_entries{
+  padding: 20px;
+  color: white;
+}
 
+#new_entries{
+  padding: 20px;
+  color: white;
+}
+
+.pic{
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  margin: 20px;
+  margin: 0 auto;
+  top: 20px;
+  background-image: url('http://fc06.deviantart.net/fs71/f/2014/242/2/5/funny_meme_by_firefox2014-d7x82sj.jpg');
+  background-size: 100%;
 }
 
 @font-face {
