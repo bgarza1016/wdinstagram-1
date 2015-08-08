@@ -40,23 +40,34 @@ h1{
   padding: 20px;
 }
 
+.form{
+  width: 30%;
+  color: #3f729b;
+}
+
+.forms{
+font-size: 30px;
+text-align: center;
+margin: 0 auto;
+padding: 50px;
+}
+
 #all_entries{
   padding: 20px;
   color: white;
 }
 
-#new_entries{
+#new_entry{
   padding: 20px;
   color: white;
 }
 
 .pic{
-  width: 500px;
-  height: 300px;
+  width: 490px;
+  height: 290px;
   border-radius: 20px;
-  margin: 20px;
-  margin: 0 auto;
-  top: 20px;
+  margin: 25px;
+  position: absolute;
   background-image: url('http://fc06.deviantart.net/fs71/f/2014/242/2/5/funny_meme_by_firefox2014-d7x82sj.jpg');
   background-size: 100%;
 }
