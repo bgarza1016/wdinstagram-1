@@ -1,15 +1,23 @@
 // Entry model
+
+// The Post model
+
 var mongoose = require('mongoose')
-
-
-var Entry = mongoose.model('Entry',{
-  author: String,
-  entry_url: String,
-  date_taken: String,
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  }
+  ,Schema = mongoose.Schema
+  ,ObjectId = Schema.ObjectId;
 });
 
-module.export = model;
+var entrySchema = new Schema({
+   author: String,
+   photo_url: {type: String, default: 'Anon'},
+   date_taken: {type: Date, default: Date.now}
+});
+
+// var Beer = mongoose.model('Entry', {
+//   author: String,
+//   photo_url: {type: String, default: 'Anon'},
+//   date_taken: {type: Date, default: Date.now} default: Date.now
+// }
+
+
+module.exports = mongoose.model('Entry', entrySchema);

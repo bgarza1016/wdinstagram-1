@@ -1,5 +1,7 @@
 var express       = require('express'),
+    app           = express(),
     mongoose      = require('mongoose'),
+    methodOverride= require('method-override')
     http          = require('http'),
     path          = require('path'),
     favicon       = require('serve-favicon'),
@@ -12,8 +14,6 @@ var express       = require('express'),
 mongoose.connect('mongodb://localhost/wdinstagram')
 
 var routes = require('./routes/index');
-
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
