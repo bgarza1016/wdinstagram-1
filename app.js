@@ -8,7 +8,7 @@ var express       = require('express'),
     router        = express.Router(),
     logger        = require('morgan'),
     cookieParser  = require('cookie-parser'),
-    bodyparser    = require('body-parser'),
+    bodyParser    = require('body-parser'),
     port          = 3000;
 
 mongoose.connect('mongodb://localhost/wdinstagram')

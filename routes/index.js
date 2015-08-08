@@ -1,4 +1,4 @@
-var express = require('express');
+/*var express = require('express');
 var router = express.Router();
 var entriesController = require('./controllers/entries');
 
@@ -36,6 +36,13 @@ router.post('/entries', function(req,res,next){
     if(error) return res.send(error);
     res.redirect('/entries');
   });
-});
+});*/
+
+var express = require('express');
+var router = express.Router();
+var entriesController = require('../controllers/entries');
+
+/* GET '/' - render entries index view */
+router.get('/', entriesController.renderEntriesIndex);
 
 module.exports = router;
