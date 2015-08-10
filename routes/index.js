@@ -37,7 +37,7 @@ router.post('/entries', function(req,res,next){
     res.redirect('/entries');
   });
 });*/
-
+    
 var express = require('express');
 var router = express.Router();
 var entriesController = require('../controllers/entries');
