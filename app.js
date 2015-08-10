@@ -1,7 +1,8 @@
 var express       = require('express'),
     app           = express(),
     mongoose      = require('mongoose'),
-    methodOverride= require('method-override')
+    methodOverride= require('method-override'),
+    moment        = require ('moment'),
     http          = require('http'),
     path          = require('path'),
     favicon       = require('serve-favicon'),
@@ -19,11 +20,10 @@ var routes = require('./routes/index');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
