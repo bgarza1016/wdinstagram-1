@@ -2,23 +2,26 @@
 
 // The Post model
 
-var mongoose = require('mongoose')
-  ,Schema = mongoose.Schema
-  ,ObjectId = Schema.ObjectId;
-});
-var moment = require('moment');
+var mongoose = require('mongoose'),
+  Schema = mongoose.Schema,
+  ObjectId = Schema.ObjectId,
+  moment = require('moment');
 
+
+// Grabbing time of action and putting it in appropriate format
+var formatDate = function(date_taken) {
+  return moment(date_taken).format('MMM D, YYYY');
+};
+
+// New entry schema for posts
 var entrySchema = new Schema({
-   author: String,
-   photo_url: {type: String, default: 'Anon'},
-   date_taken: {type: Date, default: Date.now}
+  author:     String,
+  date_taken: {
+    type:    Date,
+    default: Date.now,
+    get:     formatDate
+  },
+  photo_url:  String
 });
-
-// var Beer = mongoose.model('Entry', {
-//   author: String,
-//   photo_url: {type: String, default: 'Anon'},
-//   date_taken: {type: Date, default: Date.now} default: Date.now
-// }
-
 
 module.exports = mongoose.model('Entry', entrySchema);
